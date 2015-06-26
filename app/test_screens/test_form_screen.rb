@@ -50,7 +50,7 @@ class TestFormScreen < PM::FormScreen
         value: "",
         image: 'test'
       }]
-    }, {
+    }, { 
 			title: "Boolean Values Section",
 			cells: [{
 					title: "Cell with false boolean",
