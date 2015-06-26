@@ -51,23 +51,19 @@ class TestFormScreen < PM::FormScreen
         image: 'test'
       }]
     }, {
-				title: "Boolean Values Section",
-				cells: [
-					{
-						title: "Cell with false boolean",
-						type: :boolean,
-						value: false
-					},
-					{
-						title: "Cell with 1 as boolean",
-						type: :boolean,
-						value: 1
-					},
-					{
-						title: "Cell with empty",
-						type: :boolean
-					}
-				]
+			title: "Boolean Values Section",
+			cells: [{
+					title: "Cell with false boolean",
+					type: :boolean,
+					value: false
+				}, {
+					title: "Cell with 1 as boolean",
+					type: :boolean,
+					value: 1
+				},{
+					title: "Cell with empty",
+					type: :boolean
+				}]
 			}]
   end
 

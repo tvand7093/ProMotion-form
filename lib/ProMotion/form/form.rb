@@ -71,7 +71,8 @@ module ProMotion
       data[:title] ||= input[:label] || input[:name ].to_s
       data[:cell ] ||= input[:cell_class] if input[:cell_class]
 
-			if input.key?(:value) && input[:type] == :boolean 
+      # valid boolean checks
+			if input.key?(:value) && input[:type] == :boolean
 				input[:value] = input[:value].to_s.downcase
 				data[:value] = true.to_s if input[:value] == true.to_s || input[:value] == "1"
 				data[:value] = false.to_s if input[:value] == false.to_s || input[:value] != "1"
