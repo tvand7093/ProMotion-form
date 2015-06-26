@@ -23,7 +23,7 @@ describe "ProMotion::TestFormScreen unit" do
   it "contains cells" do
     form_controller.sections[0].fields.count.should == 3
     form_controller.sections[1].fields.count.should == 1
-		
+
   end
 
   it "provides a sensible default for cells without a :name" do
@@ -45,12 +45,12 @@ describe "ProMotion::TestFormScreen unit" do
     field0 = form_controller.sections[0].fields[0]
     field1 = form_controller.sections[0].fields[1]
     field2 = form_controller.sections[0].fields[2]
-		field3 = form_controller.sections[4].fields[2]
-		
+    field3 = form_controller.sections[4].fields[2]
+
     field0.value.should == "jamon@example.com"
     field1.value.should == ""
     field2.value.to_s.should == NSDate.date.to_s
-		field3.value.should == true.to_s
+    field3.value.should == true.to_s
   end
 
   it "allows cell customization from the hash" do
@@ -75,12 +75,12 @@ describe "ProMotion::TestFormScreen unit" do
     settings = field.cellConfig
     settings['imageView.image'].class.should == UIImage
   end
-	
-	it "allows the user to set a boolean value" do
+
+  it "allows the user to set a boolean value" do
     field0 = form_controller.sections[4].fields[0]
-		field1 = form_controller.sections[4].fields[1]
-		
-		field0.value.should == false.to_s
-		field1.value.should == true.to_s
+    field1 = form_controller.sections[4].fields[1]
+
+    field0.value.should == false.to_s
+    field1.value.should == true.to_s
   end
 end

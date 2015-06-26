@@ -72,11 +72,11 @@ module ProMotion
       data[:cell ] ||= input[:cell_class] if input[:cell_class]
 
       # valid boolean checks
-			if input.key?(:value) && input[:type] == :boolean
-				input[:value] = input[:value].to_s.downcase
-				data[:value] = true.to_s if input[:value] == true.to_s || input[:value] == "1"
-				data[:value] = false.to_s if input[:value] == false.to_s || input[:value] != "1"
-			end
+      if input.key?(:value) && input[:type] == :boolean
+        input[:value] = input[:value].to_s.downcase
+        data[:value] = true.to_s if input[:value] == true.to_s || input[:value] == "1"
+        data[:value] = false.to_s if input[:value] == false.to_s || input[:value] != "1"
+      end
       data
     end
 
@@ -86,7 +86,7 @@ module ProMotion
         when :date then NSDate.date
         when :time then NSDate.date
         when :datetime then NSDate.date
-				when :boolean then true.to_s
+        when :boolean then true.to_s
         else ""
         end
       end
