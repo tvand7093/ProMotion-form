@@ -63,6 +63,20 @@ class TestFormScreen < PM::FormScreen
         { title: '' }, # title as an empty string with no fallbacks
         { title: '', label: 'Test Label' }, # since title is not nil, label is not applied
       ]
+    }, {
+      title: "Boolean Values Section",
+      cells: [{
+        title: "Cell with false boolean",
+        type: :boolean,
+        value: false
+      }, {
+        title: "Cell with 1 as boolean",
+        type: :boolean,
+        value: 1
+      },{
+        title: "Cell with empty",
+        type: :boolean
+      }]
     }]
   end
 
