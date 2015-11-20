@@ -17,7 +17,7 @@ describe "ProMotion::TestFormScreen unit" do
   after { @form_screen = nil }
 
   it "contains sections" do
-    form_controller.sections.count.should == 5
+    form_controller.sections.count.should == 6
   end
 
   it "contains cells" do
@@ -68,7 +68,7 @@ describe "ProMotion::TestFormScreen unit" do
     field0 = form_controller.sections[0].fields[0]
     field1 = form_controller.sections[0].fields[1]
     field2 = form_controller.sections[0].fields[2]
-    field3 = form_controller.sections[4].fields[2]
+    field3 = form_controller.sections[5].fields[2]
 
     field0.value.should == "jamon@example.com"
     field1.value.should == ""
