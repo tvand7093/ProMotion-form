@@ -99,17 +99,16 @@ describe "ProMotion::TestFormScreen unit" do
     settings['imageView.image'].class.should == UIImage
   end
 
-<<<<<<< HEAD
   it "allows setting the cell title using :label" do
     field = form_controller.sections[1].fields[1]
     field.title.should.be == "Test"
-=======
+  end
+
   it "allows the user to set a boolean value" do
-    field0 = form_controller.sections[4].fields[0]
-    field1 = form_controller.sections[4].fields[1]
+    field0 = form_controller.sections[5].fields[0]
+    field1 = form_controller.sections[5].fields[1]
 
     field0.value.should == false.to_s
     field1.value.should == true.to_s
->>>>>>> origin/bugfix/boolean-crash
   end
 end
